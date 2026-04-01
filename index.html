@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perplexity Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="top-bar">
+        <!-- Kept empty on the left to balance the absolute center -->
+        <div></div> 
+        
+        <div class="top-center">
+            <span class="badge new-badge">New</span>
+            <span class="promo-text">Computer is now available on Pro</span>
+            <a href="#" class="upgrade-link">Upgrade &rarr;</a>
+        </div>
+
+        <div class="top-right">
+            <button class="top-btn">
+                <i class="fa-regular fa-calendar-check"></i> 
+                Scheduled 
+                <i class="fa-solid fa-chevron-down small-icon"></i>
+            </button>
+            <button class="top-btn icon-only">
+                <i class="fa-solid fa-layer-group"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="logo">perplexity</h1>
+
+        <div id="chat-history" class="chat-history hidden"></div>
+
+        <div class="search-container">
+            <div class="input-wrapper">
+                <textarea placeholder="Type @ for connectors and sources" class="main-input" rows="1"></textarea>
+            </div>
+            
+            <div class="bottom-controls">
+                <div class="left-controls">
+                    <input type="file" id="pdf-upload" accept="application/pdf" class="hidden">
+                    <button class="icon-btn add-btn" id="add-btn-trigger" title="Add PDF">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="pill-btn computer-btn">
+                        <i class="fa-solid fa-desktop"></i> Computer <span>+</span>
+                    </button>
+                </div>
+                
+                <div class="right-controls">
+                    <button class="text-btn model-btn">
+                        Model <i class="fa-solid fa-chevron-down small-icon"></i>
+                    </button>
+                    <button class="icon-btn mic-btn" title="Voice Input">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <button class="submit-btn" title="Submit">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12V16M8 8V20M12 4V24M16 8V20M20 12V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
